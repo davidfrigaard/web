@@ -1,0 +1,288 @@
+/* Table of Contents
+==================================================
+	#Reset & Basics
+	#Typography
+	#Links
+	#Lists
+	#Images
+	#Buttons
+	#Forms
+	#Other
+*/
+
+/*====== Reset ======*/
+/* v2.0 of Eric Meyer's reset
+http://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';
+content: none;}
+table {border-collapse: collapse;
+border-spacing: 0;}
+
+/*====== Typography ======*/
+
+@font-face {
+	    font-family: 'NeueRo';
+	    src: url('../fonts/NeueRo.eot');
+	    src: url('../fonts/NeueRo.eot?iefix') format('eot'),
+	         url('../fonts/NeueRo.woff') format('woff'),
+	         url('../fonts/NeueRo.ttf') format('truetype'),
+	         url('../fonts/NeueRo.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+
+@font-face {
+	    font-family: 'NeueLt';
+	    src: url('../fonts/NeueLt.eot');
+	    src: url('../fonts/NeueLt.eot?iefix') format('eot'),
+	         url('../fonts/NeueLt.woff') format('woff'),
+	         url('../fonts/NeueLt.ttf') format('truetype'),
+	         url('../fonts/NeueLt.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+
+@font-face {
+	    font-family: 'NeueTh';
+	    src: url('../fonts/NeueTh.eot');
+	    src: url('../fonts/NeueTh.eot?iefix') format('eot'),
+	         url('../fonts/NeueTh.woff') format('woff'),
+	         url('../fonts/NeueTh.ttf') format('truetype'),
+	         url('../fonts/NeueTh.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+
+@font-face {
+	    font-family: 'NeueUltLt';
+	    src: url('../fonts/NeueUltLt.eot');
+	    src: url('../fonts/NeueUltLt.eot?iefix') format('eot'),
+	         url('../fonts/NeueUltLt.woff') format('woff'),
+	         url('../fonts/NeueUltLt.ttf') format('truetype'),
+	         url('../fonts/NeueUltLt.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+
+body {
+		background: #FFFFFF;
+		font: 14pt "NeueLt", Arial, sans-serif;
+		color: #000000;
+		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+		-webkit-text-size-adjust: 100%;
+ }
+
+h1, h2, h3, h4, h5, h6 {
+		font-family: "NeueTh", Arial, sans-serif;
+		font-weight: normal;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
+h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+h5 { font-size: 17px; line-height: 24px; }
+h6 { font-size: 14px; line-height: 21px; }
+
+p { margin: 0 0 20px 0; }
+
+hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+a, a:visited { color: #E87D0F; text-decoration: none; outline: 0; }
+a:hover, a:focus { color: #E84B13; }
+p a, p a:visited { line-height: inherit; }
+
+/*====== Lists ======*/
+
+ul, ol { margin-bottom: 20px; }
+	ul { list-style: none outside; }
+	ol { list-style: decimal; }
+	ol, ul.square, ul.circle, ul.disc { margin-left: 20px; }
+	ul.square { list-style: square outside; }
+	ul.circle { list-style: circle outside; }
+	ul.disc { list-style: disc outside; }
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 5px 0 8px 20px; font-size: 90%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 8px; }
+	li { line-height: 18px; margin-bottom: 8px; }
+	li p { line-height: 21px; }
+
+
+/*====== Buttons ======*/
+
+.button,
+button,
+button.black,
+input[type="submit"],
+input[type="submit"].black,
+input[type="reset"],
+input[type="reset"].black,
+input[type="button"],
+input[type="button"].black	{
+	background: transparent;
+	border: 1px solid #000000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius:4px;
+	border-radius: 4px;
+	color: #000000;
+	display: inline-block;
+	font-size: 14pt;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: center;	
+	font-family: "NeueLt", Arial, sans-serif;
+	cursor: pointer;
+	padding: 5px 8px;
+}
+
+.button:hover,
+button:hover,
+button.black:hover,
+input[type="submit"]:hover,
+input[type="submit"].black:hover,
+input[type="reset"]:hover,
+input[type="reset"].black:hover,
+input[type="button"]:hover,
+input[type="button"].black:hover {
+	background-color: #000000;
+	border: 1px solid #000000;
+	color: #FFF7D9;
+}
+
+.button.white,
+button.white,
+input[type="submit"].white,
+input[type="reset"].white,
+input[type="button"].white	{
+	background: transparent;
+	border: 1px solid #FFFFFF;
+	-moz-border-radius: 4px;
+	-webkit-border-radius:4px;
+	border-radius: 4px;
+	color: #FFFFFF;
+	display: inline-block;
+	font-size: 14pt;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: center;	
+	font-family: "NeueLt", Arial, sans-serif;
+	cursor: pointer;
+	padding: 5px 8px;
+}
+
+.button.white:hover,
+button.white:hover,
+input[type="submit"].white:hover,
+input[type="reset"].white:hover,
+input[type="button"].white:hover {
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	color: #FFF7D9;
+}
+
+/*====== Forms ======*/
+
+form {margin-bottom: 20px}
+fieldset {margin-bottom: 20px}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+	background: transparent;
+	border: 1px solid #000000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius:4px;
+	border-radius: 4px;
+	color: #000000;
+	display: block;
+	font-size: 14pt;
+	font-weight: normal;
+	text-decoration: none;
+	text-align: left;	
+	font-family: "NeueLt", Arial, sans-serif;
+	padding: 5px 8px;
+	outline: none; }
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+	border: 1px solid #1F7FE8; }
+textarea {
+	min-height: 60px; }
+label,
+legend {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;  }
+input[type="checkbox"] {
+	display: inline; }
+
+/*====== Other ======*/
+
+.navbar {
+	width: 100%; 
+	float: left;
+	background-color: #FFF7D9;
+	text-align: center;
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.navbar li,
+.navbar li a {
+	float: left;
+	display: block;
+}
+
+.itemlist {
+	float: left;
+	list-style: none;
+}
+
+.itemlist li,
+.itemlist li a {
+	float: left;
+	display: inline-block;
+}
+
+.itemlist price {
+	text-align: left;
+	font-family: 'NeueRo'
+}
+
+/*.itemlist img {
+	max-width: 100%;
+	height: auto;
+}*/
+
+img.scale-with-grid {
+		max-width: 100%;
+		height: auto; }
