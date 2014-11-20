@@ -92,17 +92,19 @@ border-spacing: 0;}
 
 body {
 		background: #FFFFFF;
-		font: 14pt "NeueLt", Arial, sans-serif;
+		font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		line-height: 1.42;
 		color: #000000;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
  }
 
 h1, h2, h3, h4, h5, h6 {
-		font-family: "NeueTh", Arial, sans-serif;
+		font-family: Arial, sans-serif;
 		font-weight: normal;
+		font-style: normal;
 }
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; color: #000000;}
 h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
 h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
 h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
@@ -110,9 +112,9 @@ h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
 h5 { font-size: 17px; line-height: 24px; }
 h6 { font-size: 14px; line-height: 21px; }
 
-p { margin: 0 0 20px 0; }
+p { margin: 10px 0 20px 0; }
 
-hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+hr { border: solid #0F0F0F; border-width: 2px 0 0; clear: both; height: 0; }
 
 a, a:visited { color: #E87D0F; text-decoration: none; outline: 0; }
 a:hover, a:focus { color: #E84B13; }
@@ -122,13 +124,13 @@ p a, p a:visited { line-height: inherit; }
 
 ul, ol { margin-bottom: 20px; }
 	ul { list-style: none outside; }
-	ol { list-style: decimal; }
+	ol { list-style: decimal outside; }
 	ol, ul.square, ul.circle, ul.disc { margin-left: 20px; }
 	ul.square { list-style: square outside; }
 	ul.circle { list-style: circle outside; }
 	ul.disc { list-style: disc outside; }
 	ul ul, ul ol,
-	ol ol, ol ul { margin: 5px 0 8px 20px; font-size: 90%;  }
+	ol ol, ol ul { margin: 5px 0 8px 20px; font-size: 100%;  }
 	ul ul li, ul ol li,
 	ol ol li, ol ul li { margin-bottom: 8px; }
 	li { line-height: 18px; margin-bottom: 8px; }
@@ -153,7 +155,6 @@ input[type="button"].black	{
 	border-radius: 4px;
 	color: #000000;
 	display: inline-block;
-	font-size: 14pt;
 	font-weight: normal;
 	text-decoration: none;
 	text-align: center;	
@@ -223,11 +224,11 @@ select {
 	border-radius: 4px;
 	color: #000000;
 	display: block;
-	font-size: 14pt;
+	font-size: 16px;
 	font-weight: normal;
 	text-decoration: none;
 	text-align: left;	
-	font-family: "NeueLt", Arial, sans-serif;
+	font-family: Arial, sans-serif;
 	padding: 5px 8px;
 	outline: none; }
 textarea:focus,
@@ -247,19 +248,58 @@ input[type="checkbox"] {
 
 /*====== Other ======*/
 
-.navbar {
-	width: 100%; 
-	float: left;
-	background-color: #FFF7D9;
-	text-align: center;
-	list-style: none;
-	margin-bottom: 20px;
+.sticky {
+	position: fixed;
+	z-index: 10;
 }
 
-.navbar li,
-.navbar li a {
-	float: left;
-	display: block;
+.bodypadding {
+	padding-top: 80px;
+}
+
+.sidenav {
+	margin-top: 50px;
+}
+
+.navbar {
+	width: 100%; 
+	background-color: #fdfdfd;
+	list-style: none;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	display: table;
+}
+
+.navbar ul {
+	display: table-row;
+}
+
+.navbar ul li {
+	display: table-cell;
+	vertical-align: middle;
+}
+.navbar ul li a h4 {margin-left: 20px;}
+
+.navbar ul div {float: right;}
+
+.navbar a, 
+.navbar a:visited { color: #000000;}
+
+
+.biglist {
+	margin: 0; padding: 0;
+	display: table;
+}
+
+.biglist ol {
+	list-style: inside;
+	list-style-type: decimal;
+	margin: 0;
+}
+
+#logo {
+	width: 30px;
 }
 
 .itemlist {
@@ -286,3 +326,22 @@ input[type="checkbox"] {
 img.scale-with-grid {
 		max-width: 100%;
 		height: auto; }
+
+.alert {
+	border-left: 5px solid #eee;
+	margin-bottom: 30px;
+	padding: 20px;
+}
+.alert p,
+.alert form {padding: 0; margin: 0;}
+
+.alert .title { font-size: 21px; line-height: 30px; margin-bottom: 10px;}
+
+.red {background: #FDF3F2; border-color:#f29f97;}
+.red .title {color: #f29f97;}
+.purple {background: #FBE8FF; border-color:#BA6EFF;}
+.purple .title {color: #BA6EFF;}
+.orange {background: #FDF1D5; border-color:#F2D697;}
+.orange .title {color: #F2D697;}
+.green {background: #D5FDDB; border-color:#A5F297;}
+.green .title {color: #A5F297;}
